@@ -1,7 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoursesDatabase
 {
@@ -15,5 +12,8 @@ namespace CoursesDatabase
         }
         public DbSet<Kurs> Kurser { get; set; }
         public DbSet<Elev> Elever { get; set; }
+        public DbSet<Larare> Larare { get; set; }
+        public DbSet<KursElev> KursElev { get;set; }
+        public DbSet<Betyg> Betyg { get; set; }
     }
 }

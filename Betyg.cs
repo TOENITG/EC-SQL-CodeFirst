@@ -3,14 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CoursesDatabase
 {
-    public class Kurs
+    public class Betyg
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int BetygID { get; set; }
+        public char BetygsBokstav { get; set; }
         public int KursID { get; set; }
-        public string Namn { get; set; }
-        public int Sal { get; set; }
-        public int LarareID { get; set; }
-        public Larare Larare { get; set; }
+        public Kurs Kurs { get; set; }
+        public int ElevID { get; set; }
+        public Elev Elev { get; set; }
     }
 }
